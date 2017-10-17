@@ -34,7 +34,8 @@ test('Search "playz" projects', async page => {
   await page
     .resizeWindow(1280,800)
     .expect(searchExists).ok()
-    .typeText('input[name=q]', 'play')
+    .click('input[name=q]')
+    .typeText('input[name=q]', 'playz')
     .pressKey('enter')
     .expect(repoListExists).ok()
     .expect(playRepoExists).ok()

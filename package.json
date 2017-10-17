@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/testcafe/bin/testcafe-with-v8-flag-filter.js chrome test/github.js",
+    "test-ff": "./node_modules/testcafe/bin/testcafe-with-v8-flag-filter.js path:/home/jori/softaa/firefox/firefox test/github.js",
     "test-headless": "./node_modules/testcafe/bin/testcafe-with-v8-flag-filter.js \"chromium:headless\" test/github.js",
     "test-headless-screenshot": "./node_modules/testcafe/bin/testcafe-with-v8-flag-filter.js \"chromium:headless\" test/github.js --screenshots ./screenshots --screenshots-on-fails",
     "test-parallel": "./node_modules/testcafe/bin/testcafe-with-v8-flag-filter.js chromium -c 3 test/github.js",
