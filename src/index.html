@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Test</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    function setName() {
+      const name = document.getElementsByName('name')[0].value
+      localStorage.setItem('name', name)
+    }
+  </script>
+
+  <script type="text/javascript">
+    if (localStorage.getItem('name') !== null) {
+      document.write(`<p id="the-name">${localStorage.getItem('name')}</p>`)
+      //localStorage.clear()
+    } else {
+      document.write(`<form>
+        <span>Name:</span>
+        <input name="name" type="text" />
+        <button onClick="setName()">Send</button>
+      </form>`)
+    }
+  </script>
+
+</body>
+</html>
